@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rframe\n"
 "POT-Creation-Date: 2019-10-13 10:39+0200\n"
-"PO-Revision-Date: 2019-10-13 10:39+0200\n"
+"PO-Revision-Date: 2019-10-13 18:37+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -132,8 +132,7 @@ msgstr "2. Publiez votre article"
 #: Rframe-post.php:123
 msgid "3. Add the following shortcode within your post or page (copy-paste)"
 msgstr ""
-"3. Ajoutez le shortcode ci-dessous dans votre publication ou page (copier-"
-"coller)"
+"3. Ajoutez le shortcode ci-dessous dans votre publication (copier-coller)"
 
 #: Rframe-post.php:131
 msgid ""
