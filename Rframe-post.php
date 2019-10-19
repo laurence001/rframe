@@ -53,13 +53,7 @@ add_action( 'init', 'rframe_cpt');
 
 
 //Flush
-register_deactivation_hook( __FILE__, 'flush_rewrite_rules' );
-register_activation_hook( __FILE__, 'rframe_flush_rewrites' );
-function rframe_flush_rewrites() {
-	rframe_create_post_type();
-	flush_rewrite_rules();
-}
-add_action( 'after_switch_theme', 'flush_rewrite_rules' );
+flush_rewrite_rules();
 
 //Preview (debug)
 
