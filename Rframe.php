@@ -3,7 +3,7 @@
 Plugin Name: Rframe
 Plugin URI: http://www.ohmybox.info
 Description: Add generated HTML code from R and convert it as an iframe
-Version: 0.2
+Version: 0.3
 Author: Laurence/OhMyBox.info
 Author URI: http://www.ohmybox.info
 Text domain: rframe
