@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Rframe
-Plugin URI: http://www.ohmybox.info
+Plugin URI: http://journodev.tech/rframe/
 Description: Add generated HTML code from R and convert it as an iframe
-Version: 0.2
-Author: Laurence/OhMyBox.info
-Author URI: http://www.ohmybox.info
+Version: 0.3
+Author: Laurence Dierickx
+Author URI: https://journodev.tech
 Text domain: rframe
 Domain Path: /languages/
 License: GPL2
