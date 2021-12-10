@@ -14,3 +14,6 @@ The plugin is available in English and in French.
 ## Troubleshooting
 
 The Rframe is blank or generated a 404 error: go to settings/permalinks and save (there is nothing else to do)
+
+## Screenshot
+![]https://journodev.tech/wp-content/uploads/2021/12/rframe.png
