@@ -32,11 +32,14 @@ function rframe_cpt() {
 		'items_list_navigation' => __( 'Rframes list navigation', 'rframe' ),
 		'filter_items_list'     => __( 'Filter Rframes list', 'rframe' ),
 	),
+			'has_archive'         	=> true,
 			'public'              	=> true,
 			'publicly_queryable'  	=> true,
 			'exclude_from_search' 	=> true,
+			'show_in_rest'		 	=> true,
 			'show_ui'             	=> true,
 			'show_in_menu'        	=> true,
+			'show_admin_column'     => true,
 			'menu_position'       	=> 80,
 			'menu_icon'				=> 'dashicons-media-code',
 			'capability_type'     	=> 'post',
@@ -53,8 +56,13 @@ add_action( 'init', 'rframe_cpt');
 
 
 //Flush
-
-flush_rewrite_rules();
+register_deactivation_hook( __FILE__, 'flush_rewrite_rules' );
+register_activation_hook( __FILE__, 'rframe_flush_rewrites' );
+function rframe_flush_rewrites() {
+	rframe_create_post_type();
+	flush_rewrite_rules();
+}
+add_action( 'after_switch_theme', 'flush_rewrite_rules' );
 
 //Preview (debug)
 
@@ -137,8 +145,6 @@ function ag_iframe($atts, $content) {
 		<iframe src="<?php echo $link; ?>" width="100%" height="550px"> </iframe>
 		
 		
-		
-		
 	<?php 
 	endif;
 }
@@ -166,5 +172,16 @@ function template_rframe($template)
 	}
 	
 add_filter('template_include', 'template_rframe');
-	
+
+   add_action('pre_get_posts', 'filter_posts_list'); 
+
+    function filter_posts_list($query)  {
+        //$pagenow holds the name of the current page being viewed
+         global $pagenow, $typenow;  
+        if(current_user_can('edit_posts') && ('edit.php' == $pagenow))  { 
+            //global $query's set() method for setting
+            $query->set('orderby', 'date');
+            $query->set('order', 'desc');
+        }
+    }
 ?>
