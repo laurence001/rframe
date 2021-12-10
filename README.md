@@ -17,3 +17,7 @@ Tutorial (FR): https://journodev.tech/rframe-un-plugin-wp-pour-integrer-le-html-
 ## Troubleshooting
 
 The Rframe is blank or generated a 404 error: go to settings/permalinks and save (there is nothing else to do)
+
+##Screenshot
+
+![](https://journodev.tech/wp-content/uploads/2021/12/rframe.png)
